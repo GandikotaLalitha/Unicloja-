@@ -44,101 +44,58 @@
 
 <body>
   <!-- Topbar Start -->
-   <!-- Topbar Start -->
-   <div class="containerq" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-</div>
-<div class="container-fluid">
-    
-    <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
-        <div class="d-inline-flex align-items-center h-100">
-            <div id="mySidebar" class="sidebar" style="width: 0px;">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">Yours Profile</a>
-                <a href="#">Becomes a Sellers</a>
-                <a href="#">Orders</a>
-                <a href="#">Languages</a>
-                <a href="#">Notifications</a>
-                <a href="#">Privacy and Policy</a>
-                <a href="#">Help Us</a>
-            </div>
-            
-            <div id="main" style="margin-left: -60px; ">
-                <button class="openbtn" onclick="openNav()">☰ </button>
-            </div>
-        </div>
-        <div class="col-lg-4" style="display:flex;">
-            <a href="" class="text-decoration-none">
-                <img src="img/icon3.png" alt="icon" style="width: 60px; height: 60px;">
-            </a>
-            <div class="unicloja mt-2">
-                <a href="" class="text-decoration-none" style="margin-top: 10%;">
-                    <span class="h1 text-uppercase text-primary bg-dark px-2" id="unic">UNIC</span>
-                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1" id="loja">LOJA</span>
-                </a>
-            </div>
-           
-        </div>
-        <div class="col-lg-4 col-6 text-left">
-            <form action="">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products" style="border: solid 2px;">
-                    <div class="input-group-append">
-                        <span class="input-group-text bg-transparent text-primary">
-                            <i class="fa fa-search"></i>
-                        </span>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row bg-secondary py-1 px-xl-5" style="width: 300px;">
-        <div class="col-lg-6 text-center text-lg-right">
-            <div class="d-inline-flex align-items-center" style="margin-right: -100px;">
-                
-                <div class="btn-group mx-2">
-                    
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button">EUR</button>
-                        <button class="dropdown-item" type="button">GBP</button>
-                        <button class="dropdown-item" type="button">CAD</button>
-                        <button class="dropdown-item" type="button">USD</button>
-                    </div>
-                </div>
-                <script>//This script is used to initialise the location
-                    function getLocation() {
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(showPosition, showError);
-                        } else {
-                            document.getElementById("coordinates").innerHTML = "Geolocation is not supported by this browser.";
-                        }
-                    }
-                
-                    function showPosition(position) {
-                        var latitude = position.coords.latitude;
-                        var longitude = position.coords.longitude;
-                        document.getElementById("coordinates").innerHTML = latitude + ", " + longitude;
-                    }
-                
-                    function showError(error) {
-                        switch (error.code) {
-                            case error.PERMISSION_DENIED:
-                                document.getElementById("coordinates").innerHTML = "User denied the request for Geolocation.";
-                                break;
-                            case error.POSITION_UNAVAILABLE:
-                                document.getElementById("coordinates").innerHTML = "Location information is unavailable.";
-                                break;
-                            case error.TIMEOUT:
-                                document.getElementById("coordinates").innerHTML = "The request to get user location timed out.";
-                                break;
-                            case error.UNKNOWN_ERROR:
-                                document.getElementById("coordinates").innerHTML = "An unknown error occurred.";
-                                break;
-                        }
-                    }
-                </script>
-                
+  <div class="containerq" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+  <div class="container-fluid">
+      
+      <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+          <div class="d-inline-flex align-items-center h-100" style="height: max-content;width: max-content;">
+              <div id="mySidebar" class="sidebar" style="width: 0px;">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                  <a href="#">Yours Profile</a>
+                  <a href="#">Becomes a Sellers</a>
+                  <a href="#">Orders</a>
+                  <a href="#">Languages</a>
+                  <a href="#">Notifications</a>
+                  <a href="#">Privacy and Policy</a>
+                  <a href="#">Help Us</a>
+              </div>
+              
+              <div id="main" style="margin-left: -60px;">
+                  <button class="openbtn" onclick="openNav()">☰ </button>
+              </div>
+          </div>
+          <div class="col-lg-4" style="display:flex;">
+              <a href="" class="text-decoration-none">
+                  <img src="img/icon3.png" alt="icon" style="width: 60px; height: 60px;">
+              </a>
+              <div class="unicloja mt-2">
+                  <a href="" class="text-decoration-none" style="margin-top: 10%;">
+                      <span class="h1 text-uppercase text-primary bg-dark px-2">UNIC</span>
+                      <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">LOJA</span>
+                  </a>
+              </div>
+             
+          </div>
+          <div class="col-lg-4 col-6 text-left">
+              <form action="">
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for products" style="border: solid 2px;">
+                      <div class="input-group-append">
+                          <span class="input-group-text bg-transparent text-primary">
+                              <i class="fa fa-search"></i>
+                          </span>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="row bg-secondary py-1 px-xl-5" style="width: 300px;">
+          <div class="col-lg-6 text-center text-lg-right">
+              <div class="d-inline-flex align-items-center" style="margin-right: -100px;">
+                  
                 <div class="btn-group" id="location-info">
                     <button type="button" class="btn btn-sm btn-light  " >Location</button>  
                 </div>
@@ -150,15 +107,11 @@
                         </button>
                         <button class="dropdown-item" type="button"><a href="details.html"> Edit your details</a></button>
                         
-                        <button class="dropdown-item" type="button"><a href="wish.html" style="color: rgb(0, 0, 0);">wishlist</a></button>
-                        
+                        <button class="dropdown-item" type="button"> wishlist</button>
                         <button class="dropdown-item" type="button"><a href="orders.html" style="color: rgb(0, 0, 0);">Orders</a></button>
                         
-                        <button class="dropdown-item" type="button"><a href="cart.html" style="color: rgb(0, 0, 0);">Your Cart</a></button>
-
-                        <button class="dropdown-item" type="button"><a href="#" style="color: rgb(0, 0, 0);">Your Adress</a></button>
-                        
-                        
+                        <button class="dropdown-item" type="button">Cart page</button>
+                        <button class="dropdown-item" type="button"> Your Address</button>
                         <svg width="200" height="2">
                             <line x1="0" y1="1" x2="200" y2="1" stroke="grey" stroke-width="1" />
                         </svg>
@@ -166,28 +119,26 @@
                         <button class="dropdown-item" type="button">Sign out</button>
                     </div>
                 </div>
-            </div>
-            
-            <div class="d-inline-flex align-items-center d-block d-lg-none">
-                <a href="" class="btn px-0 ml-2">
-                    <i class="fas fa-heart text-dark"></i>
-                    <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
-                </a>
-                <a href="" class="btn px-0 ml-2">
-                    <i class="fas fa-shopping-cart text-dark"></i>
-                    <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
-                </a>
-            </div>
-        </div>
-        </div>           
-    </div>
-</div>
-<!-- Topbar End -->
+              <div class="d-inline-flex align-items-center d-block d-lg-none">
+                  <a href="" class="btn px-0 ml-2">
+                      <i class="fas fa-heart text-dark"></i>
+                      <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                  </a>
+                  <a href="" class="btn px-0 ml-2">
+                      <i class="fas fa-shopping-cart text-dark"></i>
+                      <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                  </a>
+              </div>
+          </div>
+          </div>           
+      </div>
+  </div>
+  <!-- Topbar End -->
 
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-dark mb-30">
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-dark mb-30">
         <div class="row px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
@@ -215,38 +166,38 @@
                         <div class="nav-item dropdown dropright">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown dropright">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown dropright">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown dropright">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
-                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="" class="dropdown-item">Women's Dresses</a>
+                                <a href="" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
                     
-                        <a href="./products.html" class="nav-item nav-link">Footwear</a>
-                        <a href="./products.html" class="nav-item nav-link">Jewellery</a>
+                        <a href="./footwear.html" class="nav-item nav-link">Footwear</a>
+                        <a href="./dress.html" class="nav-item nav-link">Jewellery</a>
                     
                     </div>
                 </nav>
@@ -288,12 +239,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-group" id="location-info" style="margin-top:40px;">
-                            <button type="button" class="normal-btn" style="padding:0px" style="margin:0"  id="pro-hide">Location</button>  
+   
+                        
+                        <div class="btn-group" id="location-info" style="margin:40px 0px 0 0;padding:0px">
+                            <button type="button" class="normal-btn" style="padding:0px"  id="pro-hide">Location</button>  
                         </div>
                         <a href="#" class="nav-item nav-link" >Contact Us</a>
                         </div>
-                        
                         <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                             <a href="./wish.html" class="btn px-0">
                                 <i class="fas fa-heart text-primary"></i>
@@ -313,9 +265,8 @@
             </div>
         </div>
     </div>
-    <!-- Navbar End -->
       <!-- Navbar End -->
-  <div class="d-flex w-100 mt-lg-5 d-phone sngl-pro" >
+  <div class="d-col w-100 mt-lg-5 d-phone sngl-pro" style="">
     <div class="col-lg-4 sticky-lg-top p-5 bg-white mb-lg-0 d-block justify-content-around z-0">
       <img src="img/boatwatch.jpg" alt="Product Image" class="w-50 h-40 rounded mx-auto d-block">
       <div id="image-slider" class="carousel slide m-5" data-bs-ride="carousel">

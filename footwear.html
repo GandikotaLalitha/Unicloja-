@@ -239,9 +239,33 @@
                           <a href="home.html" class="nav-item nav-link active">Home</a>
                           <a href="./orders.html" class="nav-item nav-link">Orders</a>
                           <a href="login/index.html" class="nav-item nav-link">Login</a>
-                          </div>
-                          <a href="#" class="nav-item nav-link">Contact Us</a>
-                      </div>
+                          
+                          <div class="btn-group"  id="pro-hide">
+                            <button type="button" class="normal-btn btn-sm text-white dropdown-toggle " data-toggle="dropdown" style="position: absolute;font-size:16px;padding:8px 0px;outline: none;">Profile</button>
+                            <div class="dropdown-menu dropdown-menu-right" style="margin:0 0 0 50px">
+                                <button class="dropdown-item" type="button">
+                                    <img src="img/profile.png" alt="profile picture" class="image-resize">
+                                </button>
+                                <button class="dropdown-item" type="button"><a href="details.html"> Edit your details</a></button>
+                                
+                                <button class="dropdown-item" type="button"> wishlist</button>
+                                <button class="dropdown-item" type="button"><a href="orders.html" style="color: rgb(0, 0, 0);">Orders</a></button>
+                                
+                                <button class="dropdown-item" type="button">Cart page</button>
+                                <button class="dropdown-item" type="button"> Your Address</button>
+                                <svg width="200" height="2">
+                                    <line x1="0" y1="1" x2="200" y2="1" stroke="grey" stroke-width="1" />
+                                </svg>
+                                <button class="dropdown-item" type="button">Manage Accounts</button>
+                                <button class="dropdown-item" type="button">Sign out</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group" id="location-info" style="margin:40px 0px 0 0;padding:0 0px 0 0;outline: none;">
+                        <button type="button" class="normal-btn" style="padding:0px"  id="pro-hide">Location</button>  
+                    </div>
+                    <a href="#" class="nav-item nav-link" >Contact Us</a>
+                    </div>
                       <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                           <a href="./wish.html" class="btn px-0">
                               <i class="fas fa-heart text-primary"></i>
