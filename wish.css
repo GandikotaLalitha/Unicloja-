@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Andika', sans-serif;
+       
+}
+.header{
+    display: flex;
+    background-color:#36FF33;
+    height:40px;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+}
+.text-box{
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom:8px;
+    margin-left: 90px;
+    border-radius: 5px;
+    border-color: white;
+    font-weight: bold;
+}
+.unic,.loja{
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.search{
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    margin-right: 30px;
+    width:54px;
+    background-color: #6C757D;
+    border-radius: 5px;
+    border-color: #6C757D;
+    color: white;
+    font-size: medium;
+}
+.icon{
+    padding-top: 7px;
+    padding-left: 20px;
+}
+.fa-location-dot,.fa-cart-shopping,.fa-user,.fa-caret-down{
+    color: #6C757D;
+}
+
+#heart{
+    color: #6C757D;
+}
+#login{
+    margin-top: 5px;
+    margin-left: 30px;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 25px;
+    color: #36FF33;
+    background-color:#6C757D ;
+    border-radius: 5px;
+
+}
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    padding-left: 60px;
+}
+.container{
+    background-color: aliceblue;
+    border-color:  aliceblue;
+    width: 250px;
+    height: auto;
+    margin: 20px;
+}
+.container img{
+    border-color:  aliceblue;
+    margin-left: 2px;
+    width: 246px;
+    height: auto;
+    margin-bottom: 5px;
+}
+.container span{
+    color: black;
+    font-size: large;
+}
+ .container .fa-trash{
+     margin: 7px;
+     color:red;
+     float: right;
+}
+
+.name{
+    text-align: center;
+}

@@ -1,0 +1,602 @@
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Andika&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Andika', sans-serif;
+  }
+
+.header{
+  font-size: xx-large;
+  padding: 10px;
+}
+.main{
+  padding: 20px;
+  margin: 20px 60px 20px 60px;
+  background-color: aliceblue;
+}
+.container{
+  max-width: 100%;
+  display: flex;
+  padding: 20px;
+}
+img{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.left{
+  width: 20%;
+}
+
+.details{
+  width: 80%;
+  padding: 20px;
+  display: flex;
+}
+.l-details{
+  width:60%;
+}
+.r-details{
+  width:40%;
+  padding-left: 20px;
+  background-color:ghostwhite;
+}
+
+.popup{
+    width: 400px;
+    background: #1f242d;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    padding: 0 30px 30px;
+    color: #fff;
+    visibility: hidden;
+    transition: transform 1s, top 1s;
+}
+.cancel-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+@media(max-width:1015px){
+  .main{
+  margin:0px;
+}
+.details{
+  padding: 0px;
+}
+}
+@media(max-width:900px){
+  .details{
+    display: inline;
+    padding: 0px;
+  }
+  .l-details{
+    padding: 10px;
+  width:100%;
+  }
+
+  .r-details{
+  display: flex;
+  width: 100%;
+  }
+}
+@media(max-width:800px){
+  .main{
+    margin: 40px;
+  }
+  .container{
+    display: block;
+  }
+  .details{
+    display: flex;
+    width:100%;
+  }
+   .l-details{
+    width: 50%;
+   }
+   .r-details{
+    width: 50%;
+    display: inline;
+    padding: 20px;
+   }
+   img{
+    margin-left:150px;
+   }
+}
+@media(max-width:550px){
+  .details{
+    display: inline;
+  }
+  .l-details{
+    width: 100%;
+   }
+   .r-details{
+    width: 100%;
+    display: inline;
+    padding:1px;
+    text-align: center;
+    line-height: 2em;
+   }
+   .main{
+    margin: 0px;
+  }
+  .container{
+    margin-left: 0px;
+  }
+  .left{
+  width:100%;
+}
+img {
+    margin-left: 67px;
+}
+}
+        </style>
+    </head>
+    <body>
+
+<!-- Topbar Start -->
+  <!-- Topbar Start -->
+  <div class="containerq" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+<div class="container-fluid">
+    
+    <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+        <div class="d-inline-flex align-items-center h-100">
+            <div id="mySidebar" class="sidebar" style="width: 0px;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#">Yours Profile</a>
+                <a href="#">Becomes a Sellers</a>
+                <a href="#">Orders</a>
+                <a href="#">Languages</a>
+                <a href="#">Notifications</a>
+                <a href="#">Privacy and Policy</a>
+                <a href="#">Help Us</a>
+            </div>
+            
+            <div id="main" style="margin-left: -60px; ">
+                <button class="openbtn" onclick="openNav()">☰ </button>
+            </div>
+        </div>
+        <div class="col-lg-4" style="display:flex;">
+            <a href="" class="text-decoration-none">
+                <img src="img/icon3.png" alt="icon" style="width: 60px; height: 60px;">
+            </a>
+            <div class="unicloja mt-2">
+                <a href="" class="text-decoration-none" style="margin-top: 10%;">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2" id="unic">UNIC</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1" id="loja">LOJA</span>
+                </a>
+            </div>
+           
+        </div>
+        <div class="col-lg-4 col-6 text-left">
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for products" style="border: solid 2px;">
+                    <div class="input-group-append">
+                        <span class="input-group-text bg-transparent text-primary">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row bg-secondary py-1 px-xl-5" style="width: 300px;">
+        <div class="col-lg-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center" style="margin-right: -100px;">
+                
+                <div class="btn-group mx-2">
+                    
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">EUR</button>
+                        <button class="dropdown-item" type="button">GBP</button>
+                        <button class="dropdown-item" type="button">CAD</button>
+                        <button class="dropdown-item" type="button">USD</button>
+                    </div>
+                </div>
+                <script>//This script is used to initialise the location
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition, showError);
+                        } else {
+                            document.getElementById("coordinates").innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                    }
+                
+                    function showPosition(position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        document.getElementById("coordinates").innerHTML = latitude + ", " + longitude;
+                    }
+                
+                    function showError(error) {
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                document.getElementById("coordinates").innerHTML = "User denied the request for Geolocation.";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                document.getElementById("coordinates").innerHTML = "Location information is unavailable.";
+                                break;
+                            case error.TIMEOUT:
+                                document.getElementById("coordinates").innerHTML = "The request to get user location timed out.";
+                                break;
+                            case error.UNKNOWN_ERROR:
+                                document.getElementById("coordinates").innerHTML = "An unknown error occurred.";
+                                break;
+                        }
+                    }
+                </script>
+                
+                <div class="btn-group" id="location-info">
+                    <button type="button" class="btn btn-sm btn-light  " >Location</button>  
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-light dropdown-toggle " data-toggle="dropdown">Profile</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">
+                            <img src="img/profile.png" alt="profile picture" class="image-resize">
+                        </button>
+                        <button class="dropdown-item" type="button"><a href="details.html"> Edit your details</a></button>
+                        
+                        <button class="dropdown-item" type="button"><a href="wish.html" style="color: rgb(0, 0, 0);">wishlist</a></button>
+                        
+                        <button class="dropdown-item" type="button"><a href="orders.html" style="color: rgb(0, 0, 0);">Orders</a></button>
+                        
+                        <button class="dropdown-item" type="button"><a href="cart.html" style="color: rgb(0, 0, 0);">Your Cart</a></button>
+
+                        <button class="dropdown-item" type="button"><a href="#" style="color: rgb(0, 0, 0);">Your Adress</a></button>
+                        
+                        
+                        <svg width="200" height="2">
+                            <line x1="0" y1="1" x2="200" y2="1" stroke="grey" stroke-width="1" />
+                        </svg>
+                        <button class="dropdown-item" type="button">Manage Accounts</button>
+                        <button class="dropdown-item" type="button">Sign out</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-inline-flex align-items-center d-block d-lg-none">
+                <a href="" class="btn px-0 ml-2">
+                    <i class="fas fa-heart text-dark"></i>
+                    <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                </a>
+                <a href="" class="btn px-0 ml-2">
+                    <i class="fas fa-shopping-cart text-dark"></i>
+                    <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                </a>
+            </div>
+        </div>
+        </div>           
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
+                    <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categories</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./dress.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./dress.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown dropright">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
+                                <a href="./products.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="./products.html" class="dropdown-item">Baby's Dresses</a>
+                            </div>
+                        </div>
+                    
+                        <a href="./products.html" class="nav-item nav-link">Footwear</a>
+                        <a href="./products.html" class="nav-item nav-link">Jewellery</a>
+                    
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-dark bg-light px-2">UNIC</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">LOJA</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="home.html" class="nav-item nav-link active" style="padding:20px 0 6px 0px">Home</a>
+                            <a href="./orders.html" class="nav-item nav-link">Orders</a>
+                            <a href="login/index.html" class="nav-item nav-link">Login</a>
+
+                            
+                            <div class="btn-group"  id="pro-hide">
+                                <button type="button" class="normal-btn btn-sm text-white dropdown-toggle " data-toggle="dropdown" style="position: absolute;font-size:16px;padding:8px 0px;outline: none;">Profile</button>
+                                <div class="dropdown-menu dropdown-menu-right" style="margin:0 0 0 50px">
+                                    <button class="dropdown-item" type="button">
+                                        <img src="img/profile.png" alt="profile picture" class="image-resize">
+                                    </button>
+                                    <button class="dropdown-item" type="button"><a href="details.html"> Edit your details</a></button>
+                                    
+                                    <button class="dropdown-item" type="button"> wishlist</button>
+                                    <button class="dropdown-item" type="button"><a href="orders.html" style="color: rgb(0, 0, 0);">Orders</a></button>
+                                    
+                                    <button class="dropdown-item" type="button">Cart page</button>
+                                    <button class="dropdown-item" type="button"> Your Address</button>
+                                    <svg width="200" height="2">
+                                        <line x1="0" y1="1" x2="200" y2="1" stroke="grey" stroke-width="1" />
+                                    </svg>
+                                    <button class="dropdown-item" type="button">Manage Accounts</button>
+                                    <button class="dropdown-item" type="button">Sign out</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group" id="location-info" style="margin-top:40px;">
+                            <button type="button" class="normal-btn" style="padding:0px" style="margin:0"  id="pro-hide">Location</button>  
+                        </div>
+                        <a href="#" class="nav-item nav-link" >Contact Us</a>
+                        </div>
+                        
+                        <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+                            <a href="./wish.html" class="btn px-0">
+                                <i class="fas fa-heart text-primary"></i>
+                                
+                            </a>
+                            <a href="./cart.html" class="btn px-0 ml-3">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                                
+                            </a>
+                            <a href="" class="btn px-0 ml-3">
+                                <i class='fas fa-map-marker-alt' style='color:rgb(60, 255, 0)'></i>
+                                
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+
+<div class="main">
+             <div class="header">
+                   Your orders
+             </div>
+  <div class="container">
+         <div class="left">
+          <a href="./single_product.html"><img src="img/boatwatch.jpg" alt=""></a>
+         </div>
+         <div class="details">
+            <div class="l-details">
+          boAt Airdopes 181 in-Ear True Wireless Earbuds with ENx Tech, Beast Mode(Low Latency Upto 60ms) for Gaming, with Mic, ASAP Charge, 20H Playtime, Bluetooth v5.2, IPX4 & IWP (Carbon Black) 
+            </div>
+           <div class="r-details">
+               <div class="data"> Order placed: 12 August 2023</div>
+               <div class="payment type">Payment Type: Cash On Delivery</div>
+               <div class="cost">Cost: ₹199.00</div>
+               <div class="cancel">
+                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <a href="#container"><button class="btn btn-danger btn-md me-md-2" type="button" onclick="cancel()"> Cancel Order</button></a>
+                     </div>
+                     <div class="popup" id="popup">
+                            <br>
+                        <h2 style="text-align: center;">Reason to cancel order</h2>
+                        <input type="checkbox" value="long_del">    Expected delivery date is too long  &nbsp;<br>
+                        <input type="checkbox" value="change">  Change Color/Quantity of Items <br>
+                        <input type="checkbox" value="bought">      I bought this item at another placeholder <br>
+                        <input type="checkbox" value="mind_changes">        I changed my mind <br>
+                        <div class="mb-3">
+                            <label for="reason" class="form-label"><h4>Others</h4></label>
+                            <input type="text " class="form-control" id="reasons" style="border: 1px solid black" placeholder="Write your reason here..."><br>
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-danger btn-sm me-md-2" type="button" onclick="Close()"> Cancel Order</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </div>
+  </div>  
+</div>
+
+<div class="container">
+  <div class="left">
+   <a href="./single_product.html"><img src="img/boatwatch.jpg" alt=""></a>
+  </div>
+  <div class="details">
+     <div class="l-details">
+   boAt Airdopes 181 in-Ear True Wireless Earbuds with ENx Tech, Beast Mode(Low Latency Upto 60ms) for Gaming, with Mic, ASAP Charge, 20H Playtime, Bluetooth v5.2, IPX4 & IWP (Carbon Black) 
+     </div>
+    <div class="r-details">
+        <div class="data"> Order placed: 12 August 2023</div>
+        <div class="payment type">Payment Type: Cash On Delivery</div>
+        <div class="cost">Cost: ₹199.00</div>
+        <div class="cancel">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                   <a href="#container"><button class="btn btn-danger btn-md me-md-2" type="button" onclick="cancel()" style="z-index: 1;"> Cancel Order</button></a>
+              </div>
+              <div class="popup" id="popup">
+                     <br>
+                 <h2 style="text-align: center;">Reason to cancel order</h2>
+                 <input type="checkbox" value="long_del">    Expected delivery date is too long  &nbsp;<br>
+                 <input type="checkbox" value="change">  Change Color/Quantity of Items <br>
+                 <input type="checkbox" value="bought">      I bought this item at another placeholder <br>
+                 <input type="checkbox" value="mind_changes">        I changed my mind <br>
+                 <div class="mb-3">
+                     <label for="reason" class="form-label"><h4>Others</h4></label>
+                     <input type="text " class="form-control" id="reasons" style="border: 1px solid black" placeholder="Write your reason here..."><br>
+                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                         <button class="btn btn-danger btn-sm me-md-2" type="button" onclick="Close()"> Cancel Order</button>
+                   </div>
+                  </div>
+                </div>
+            </div>
+   </div>
+</div>  
+</div>
+
+
+<div class="container">
+  <div class="left">
+    <a href="./single_product.html"><img src="img/boatwatch.jpg" alt=""></a>
+  </div>
+  <div class="details">
+     <div class="l-details">
+        boAt Airdopes 181 in-Ear True Wireless Earbuds with ENx Tech, Beast Mode(Low Latency Upto 60ms) for Gaming, with Mic, ASAP Charge, 20H Playtime, Bluetooth v5.2, IPX4 & IWP (Carbon Black) 
+     </div>
+     <div class="r-details">
+        <div class="data"> Order placed: 12 August 2023</div>
+        <div class="payment type">Payment Type: Cash On Delivery</div>
+        <div class="cost">Cost: ₹199.00</div>
+        <div style="color:red ;">Delivered!</div>
+      </div>
+  </div>  
+</div>
+
+
+<div class="container">
+  <div class="left">
+    <a href="./single_product.html"><img src="img/boatwatch.jpg" alt=""></a>
+  </div>
+  <div class="details">
+     <div class="l-details">
+   boAt Airdopes 181 in-Ear True Wireless Earbuds with ENx Tech, Beast Mode(Low Latency Upto 60ms) for Gaming, with Mic, ASAP Charge, 20H Playtime, Bluetooth v5.2, IPX4 & IWP (Carbon Black) 
+     </div>
+    <div class="r-details">
+        <div class="data"> Order placed: 12 August 2023</div>
+        <div class="payment type">Payment Type: Cash On Delivery</div>
+        <div class="cost">Cost: ₹199.00</div>
+        <div style="color:red ;">Delivered!</div>
+    </div>
+   </div>
+</div>
+<div class="container">
+  <div class="left">
+    <a href="./single_product.html"><img src="img/boatwatch.jpg" alt=""></a>
+  </div>
+  <div class="details">
+     <div class="l-details">
+   boAt Airdopes 181 in-Ear True Wireless Earbuds with ENx Tech, Beast Mode(Low Latency Upto 60ms) for Gaming, with Mic, ASAP Charge, 20H Playtime, Bluetooth v5.2, IPX4 & IWP (Carbon Black) 
+     </div>
+     
+    <div class="r-details">
+        <div class="data"> Order placed: 12 August 2023</div>
+        <div class="payment type">Payment Type: Cash On Delivery</div>
+        <div class="cost">Cost: ₹199.00</div>
+        <div style="color:red ;">Delivered!</div>
+     </div>
+   </div>
+</div>  
+</div>
+
+</div>   
+
+        <script>
+            let popup = document.getElementById("popup");
+            function cancel(){
+                popup.classList.add("cancel-popup");
+            }
+            function Close(){
+                popup.classList.remove("cancel-popup");
+            }
+            jQuery(function($) {
+                $('#swapHeart').on('click', function() {
+                  var $el = $(this),
+                    textNode = this.lastChild;
+                  $el.find('span').toggleClass('glyphicon-heart glyphicon-heart-empty');
+                  $el.toggleClass('swap');
+                });
+              });
+        </script>
+        <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+</html>

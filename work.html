@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web Page</title>
+    </head>
+    <body>
+        <table border="2px">
+            <tr>
+                <th colspan="2">Col1</th>
+                <th>Col2</th>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option value="Veg-Biryani">Veg-Biryani</option>
+                        <option value="Veg-starters">Veg-starters</option>
+                        <option value="Veg-Pops">Veg-Pops</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="NV-Biryani">NV-Biryani</option>
+                        <option value="NV-starters">NV-starters</option>
+                        <option value="NV-Pops">NV-Pops</option>
+                    </select>
+                </td>
+                <td><input type="number" min="250" max="999" maxlength="3" placeholder="amount" pattern="[0-9]{3}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female">
+                    <label for="female">FeMale</label><br>
+                    <input type="radio" id="others">
+                    <label for="others">Others</label><br>
+                </td>
+                <td>
+                    <input type="checkbox" id="herbi">
+                    <label for="herbi">Herbi</label><br>
+                    <input type="checkbox" id="carni">
+                    <label for="carni">Carni</label><br>
+                    <input type="checkbox" id="Omni">
+                    <label for="Omni">Omni</label><br>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

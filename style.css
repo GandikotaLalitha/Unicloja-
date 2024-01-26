@@ -1,0 +1,73 @@
+
+body {
+    margin: 0;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    display: inline-block;
+  }
+  
+  .heart {
+    color: red;
+  }
+  #unic,#loja{
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 5px;
+}
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .box {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .product {
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .share {
+    border-color: #ddd;
+    width: 25%;
+  } 
+
+  .button{
+    /* border-radius: 50%; */
+    margin-left: 70%;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .delete{
+    width: 15%;
+  }
+
+  .box h2 {
+    margin: 10px 0;
+  }
+  
+  .box p {
+    font-weight: bold;
+  }
+  
